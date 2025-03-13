@@ -45,7 +45,7 @@ def preprocess(words_file = "../tools/word_data.pkl", authors_file="../tools/ema
 
     ### text vectorization--go from strings to lists of numbers
     vectorizer = TfidfVectorizer(sublinear_tf=True, max_df=0.5,
-                                 stop_words='english')
+                                stop_words='english')
     features_train_transformed = vectorizer.fit_transform(features_train)
     features_test_transformed  = vectorizer.transform(features_test)
 
